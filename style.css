@@ -1,0 +1,179 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url('images/a.jpg');
+}
+
+header {
+  background-color: teal;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+h2{
+  color:teal ;
+}
+p{
+  color:black ;
+}
+nav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+nav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+main {
+  padding: 20px;
+  flex: 1;
+}
+
+footer {
+  background-color: whitesmoke;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Product List */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  
+}
+
+.product {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  width: 30%; /* Three products per row on large screens */
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.a{
+  color: white;
+}
+.product:hover {
+  transform: scale(1.05);
+}
+
+.product img {
+  max-width: 100%;
+  height:160px;
+  object-fit: cover;
+}
+
+.price {
+  font-weight: bold;
+  color: green;
+}
+
+/* Form Styles */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive Styles */
+
+/* Large Screens (Desktops, Laptops) */
+@media (max-width: 1200px) {
+  .product {
+    width: 45%; /* Two products per row on medium screens */
+  }
+}
+
+/* Medium Screens (Tablets) */
+@media (max-width: 768px) {
+  .product {
+    width: 100%; /* One product per row on tablets */
+  }
+
+  nav a {
+    float: none;
+    width: 100%;
+  }
+
+  form {
+    max-width: 90%;
+  }
+}
+
+/* Small Screens (Mobile Phones) */
+@media (max-width: 480px) {
+  .product {
+    width: 100%; /* One product per row on mobile */
+  }
+
+  header h1 {
+    font-size: 24px; /* Smaller font size for headers on mobile */
+  }
+
+  nav a {
+    padding: 10px;
+  }
+
+  form {
+    padding: 15px;
+  }
+
+  form input, form textarea {
+    padding: 8px;
+  }
+
+  form button {
+    padding: 8px 16px;
+  }
+}
